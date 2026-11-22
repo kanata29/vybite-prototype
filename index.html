@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Vybite — Discover Places, Find Your Vibe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Tema (terang/gelap) yang tersimpan dipasang lebih awal supaya layar tidak berkedip -->
+<script>
+try { var t = localStorage.getItem('vybite-tema') || 'light'; document.documentElement.dataset.theme = (t == 'dark') ? 'dark' : 'light'; } catch (e) {}
+</script>
+<link rel="icon" type="image/png" href="assets/vibi/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app"></div>
+
+<!-- URUTAN SCRIPT PENTING:  data  →  logika  →  tampilan  →  halaman  →  main -->
+
+<!-- 1. DATA (yang paling sering kamu edit) -->
+<script src="js/data/pilihan.js"></script>
+
+<!-- DAFTAR TEMPAT: satu baris = satu tempat. _awal.js harus paling atas.
+     Tempat baru? salin js/data/tempat/_template.js, lalu tambah satu baris di sini. -->
+<script src="js/data/tempat/_awal.js"></script>
+<script src="js/data/tempat/katsu.js"></script>
+<script src="js/data/tempat/hokben.js"></script>
+<script src="js/data/tempat/burjo.js"></script>
+<script src="js/data/tempat/people.js"></script>
+<script src="js/data/tempat/starbucks.js"></script>
+<script src="js/data/tempat/kopken.js"></script>
+<script src="js/data/tempat/sei.js"></script>
+<script src="js/data/tempat/steak.js"></script>
+<script src="js/data/tempat/kebab.js"></script>
+<script src="js/data/tempat/mieayam.js"></script>
+<script src="js/data/tempat/chowyumfat.js"></script>
+<script src="js/data/tempat/kovkoffie.js"></script>
+<script src="js/data/tempat/kopitagram.js"></script>
+<script src="js/data/tempat/batterhub.js"></script>
+<script src="js/data/tempat/dessert.js"></script>
+
+<script src="js/data/terserah.js"></script>
+<script src="js/data/lainnya.js"></script>
+<script src="js/data/feedback.js"></script>
+<script src="js/data/periksa.js"></script>
+
+<!-- 2. LOGIKA -->
+<script src="js/state.js"></script>
+<script src="js/logika.js"></script>
+
+<!-- 3. KOMPONEN TAMPILAN BERSAMA -->
+<script src="js/ui.js"></script>
+
+<!-- 4. HALAMAN (satu file = satu halaman) -->
+<script src="js/halaman/onboarding.js"></script>
+<script src="js/halaman/home.js"></script>
+<script src="js/halaman/explore.js"></script>
+<script src="js/halaman/tempat.js"></script>
+<script src="js/halaman/vibematch.js"></script>
+<script src="js/halaman/terserah.js"></script>
+<script src="js/halaman/komunitas.js"></script>
+<script src="js/halaman/rencana.js"></script>
+<script src="js/halaman/deals.js"></script>
+<script src="js/halaman/profil.js"></script>
+<script src="js/halaman/feedback.js"></script>
+
+<!-- 5. MULAI APLIKASI -->
+<script src="js/main.js"></script>
+</body>
+</html>
